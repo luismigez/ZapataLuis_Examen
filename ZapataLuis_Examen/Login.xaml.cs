@@ -20,7 +20,7 @@ namespace ZapataLuis_Examen
 
             string usuario = txtUser.Text;
             string clave = txtPass.Text;
-            if (usuario == "admin" && clave == "admin")
+            if (usuario == "estudiante2021" && clave == "uisrael2021")
             {
                 await Navigation.PushAsync(new Registro(usuario));
             }
