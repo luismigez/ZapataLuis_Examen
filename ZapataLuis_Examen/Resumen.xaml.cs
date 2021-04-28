@@ -12,11 +12,12 @@ namespace ZapataLuis_Examen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(String nombre, String pagar)
+        public Resumen(String nombre, String pagar, String usuario)
         {
             InitializeComponent();
             txtNombre.Text = nombre;
-            txtTotal.Text = pagar
+            txtTotal.Text = pagar;
+            lblUsuario.Text = usuario;
         }
     }
 }

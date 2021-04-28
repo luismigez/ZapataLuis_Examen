@@ -24,7 +24,8 @@ namespace ZapataLuis_Examen
         {
             string nombre = txtNombre.Text;
             string pagar = txtTotal.Text;
-            await Navigation.PushAsync(new Resumen(nombre, pagar));
+            string usuario = lblUsuario.Text;
+            await Navigation.PushAsync(new Resumen(nombre, pagar, usuario));
             DisplayAlert(" Correcto", "Elemento Guardado con Exito", "Gracias");
         }
 
@@ -41,6 +42,7 @@ namespace ZapataLuis_Examen
                 double mes = (saldo + porc)/3;
                 txtMes.Text = mes.ToString();
                 double total = saldo + porc + monto;
+                txtTotal.Text = total.ToString();
             }
 
             catch (Exception Ex)
