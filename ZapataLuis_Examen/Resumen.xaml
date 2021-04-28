@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZapataLuis_Examen.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="8" CornerRadius="0">
+                <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Resumen" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="Large"/>
+
+
+                <Label Text="Nombre:" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="txtNombre" IsReadOnly="True"
+                       Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Total a pagar:" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="txtTotal" IsReadOnly="True" Keyboard="Numeric" 
+                       Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                </Entry>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

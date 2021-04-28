@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZapataLuis_Examen.Login">
+
+    <StackLayout>
+        <Image Source="LOGO.png"/>
+        
+        <Entry x:Name="txtUser" Placeholder="Ingrese Usuario"/>
+        <Entry x:Name="txtPass" Placeholder="Ingrese Clave" IsPassword="True"/>
+
+        <Button x:Name="btnAbrir"
+                Text="Ingresar"
+                Clicked="btnAbrir_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

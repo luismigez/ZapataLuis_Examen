@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZapataLuis_Examen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="8" CornerRadius="0">
+                <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Registro de Pago" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="Large"/>
+                
+
+                <Label Text="Nombres:" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingreso Nombre y Apellido" 
+                       Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Monto Inicial:" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="txtMonto" Keyboard="Numeric" Placeholder="Ingrese Monto" 
+                       Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                </Entry>
+
+                <Label Text="Pago Mensual" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="txtMes" IsReadOnly="True" Placeholder="Valor mensual" 
+                       Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
+                </Entry>
+                <Entry x:Name="txtTotal" />
+
+
+            </Grid>
+
+            <Button  x:Name="btnCalcular"
+                Text="Calcular" Clicked="btnCalcular_Clicked"
+                         CornerRadius="25" TextColor="White" BackgroundColor="#00AE0C"/>
+
+
+            <Button x:Name="btnGuardar"
+                Text="Guardar"
+                Clicked="btnGuardar_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
